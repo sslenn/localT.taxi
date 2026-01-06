@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Fleet | LocalTaxi Documentary</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,900;1,900&display=swap');
+        
+        .font-doc-title { font-family: 'Playfair Display', serif; }
+        .font-doc-sans { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+
+<body class="font-doc-sans bg-black text-white selection:bg-yellow-400 selection:text-black">
+
+    <header class="fixed top-0 w-full z-50 px-8 py-6 flex justify-between items-center bg-gradient-to-b from-black/80 to-transparent backdrop-blur-sm">
+        <div class="flex items-center gap-4">
+            <div class="w-20 h-10 flex items-center justify-center shrink-0">
+                <img 
+                    src="logo.png" 
+                    alt="LocalTaxi Logo" 
+                    class="max-w-full max-h-full object-contain"
+                />
+            </div>
+        </div>
+        <nav class="hidden md:flex gap-10 text-xs font-bold uppercase tracking-widest text-gray-400">
+            <a href="#hero" class=" hover:text-yellow-400 transition-colors ">Archive</a>
+            <a href="#featured-cars" class="hover:text-yellow-400 transition-colors">The Fleet</a>
+            <a href="#destinations" class="hover:text-yellow-400 transition-colors">Destinations</a>
+            <a href="#contact" class="hover:text-yellow-400 transition-colors">contact</a>
+        </nav>
+       
+    </header>
+
+    <section id="hero" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="taxi-bg.jpg" alt="LocalTaxi" class="w-full h-full object-cover opacity-50 scale-105 animate-pulse-slow">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 text-center space-y-4 px-6">
+            <span class="text-yellow-400 font-bold uppercase tracking-[0.4em] text-xs"> Your Journey Begin Here</span>
+            <h2 class="text-6xl md:text-9xl font-doc-title italic leading-none">Welcome to <span class="text-yellow-400">LocalTaxi</span></h2>
+            <p class="text-gray-400 max-w-xl mx-auto text-sm md:text-base leading-relaxed font-light">
+                Exploring the streets of Phnom Penh and Siem Reap through the lens of comfort, reliability, and precision engineering.
+            </p>
+            <div class="pt-10">
+                <a href="#featured-cars" class="group flex flex-col items-center gap-4">
+                    <span class="text-[10px] uppercase tracking-[0.3em] text-gray-500 group-hover:text-white transition-colors">Scroll to View Fleet</span>
+                    <div class="w-[1px] h-16 bg-gradient-to-b from-yellow-400 to-transparent"></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="featured-cars" class="py-32 px-6 bg-black">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-6">
+                <div>
+                    <span class="text-yellow-400 font-bold uppercase tracking-[0.3em] text-xs">The Archive</span>
+                    <h2 class="text-5xl font-doc-title text-white mt-2">The Fleet</h2>
+                </div>
+                <p class="text-gray-500 max-w-sm border-l border-yellow-400 pl-6">
+                    A curated selection of vehicles designed for the diverse terrains of the Kingdom.
+                </p>
+            </div>
+
+            <div class="space-y-32 md:space-y-48">
+                
+                <div class="group grid md:grid-cols-12 gap-12 items-center">
+                    <div class="md:col-span-7 overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-black border border-white/5">
+                        <div class="relative h-[400px] md:h-[500px] flex items-center justify-center p-8">
+                            <img src="carModel/alphard2020.png" alt="Alphard" 
+                                class="max-w-full max-h-full object-contain transition-all duration-1000 scale-110 group-hover:scale-100 group-hover:drop-shadow-[0_20px_50px_rgba(250,204,21,0.2)]">
+                        </div>
+                    </div>
+                    <div class="md:col-span-5 space-y-6">
+                        <span class="text-yellow-400 font-bold text-sm tracking-tighter uppercase">01 // The Executive</span>
+                        <h3 class="text-4xl font-bold italic font-doc-title text-white">Luxury Alphard</h3>
+                        <p class="text-gray-400 leading-relaxed font-light">Our flagship for high-end travel. Optimized for ultimate comfort and privacy, offering a seamless blend of luxury and executive class.</p>
+            
+                    </div>
+                </div>
+
+                <div class="group grid md:grid-cols-12 gap-12 items-center">
+                    <div class="md:col-span-5 order-2 md:order-1 space-y-6 text-right">
+                        <span class="text-yellow-400 font-bold text-sm tracking-tighter uppercase">02 // The Navigator</span>
+                        <h3 class="text-4xl font-bold italic font-doc-title text-white">Premium Alphard</h3>
+                        <p class="text-gray-400 leading-relaxed font-light">Command the road. Built for family expeditions and long-distance comfort between provinces. Space meets durability.</p>
+                    </div>
+                    <div class="md:col-span-7 order-1 md:order-2 overflow-hidden rounded-2xl bg-gradient-to-bl from-gray-900 to-black border border-white/5">
+                        <div class="relative h-[400px] md:h-[500px] flex items-center justify-center p-8">
+                            <img src="carModel/alphard2012.png" alt="SUV" 
+                                class="max-w-full max-h-full object-contain transition-all duration-1000 scale-110 group-hover:scale-100 group-hover:drop-shadow-[0_20px_50px_rgba(255,255,255,0.1)]">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group grid md:grid-cols-12 gap-12 items-center">
+                    <div class="md:col-span-7 overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-black border border-white/5">
+                        <div class="relative h-[400px] md:h-[500px] flex items-center justify-center p-8">
+                            <img src="carModel/alphard.png" alt="Starex" 
+                                class="max-w-full max-h-full object-contain transition-all duration-1000 scale-110 group-hover:scale-100 group-hover:drop-shadow-[0_20px_50px_rgba(255,255,255,0.1)]">
+                        </div>
+                    </div>
+                    <div class="md:col-span-5 space-y-6">
+                        <span class="text-yellow-400 font-bold text-sm tracking-tighter uppercase">03 // The Group Transporter</span>
+                        <h3 class="text-4xl font-bold italic font-doc-title text-white">Alphard</h3>
+                        <p class="text-gray-400 leading-relaxed font-light">Versatile and spacious. The ideal choice for small groups or families requiring extra luggage capacity without compromising comfort.</p>
+                    </div>
+                </div>
+
+                <div class="group grid md:grid-cols-12 gap-12 items-center">
+                    <div class="md:col-span-5 order-2 md:order-1 space-y-6 text-right">
+                        <span class="text-yellow-400 font-bold text-sm tracking-tighter uppercase">02 // The Navigator</span>
+                        <h3 class="text-4xl font-bold italic font-doc-title text-white">Hyundai Starex</h3>
+                        <p class="text-gray-400 leading-relaxed font-light">Command the road. Built for family expeditions and long-distance comfort between provinces. Space meets durability.</p>
+                    </div>
+                    <div class="md:col-span-7 order-1 md:order-2 overflow-hidden rounded-2xl bg-gradient-to-bl from-gray-900 to-black border border-white/5">
+                        <div class="relative h-[400px] md:h-[500px] flex items-center justify-center p-8">
+                            <img src="carModel/starex.png" alt="SUV" 
+                                class="max-w-full max-h-full object-contain transition-all duration-1000 scale-110 group-hover:scale-100 group-hover:drop-shadow-[0_20px_50px_rgba(255,255,255,0.1)]">
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="group grid md:grid-cols-12 gap-12 items-center">
+                    <div class="md:col-span-7 overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-black border border-white/5">
+                        <div class="relative h-[400px] md:h-[500px] flex items-center justify-center p-8">
+                            <img src="carModel/suv.png" alt="Starex" 
+                                class="max-w-full max-h-full object-contain transition-all duration-1000 scale-110 group-hover:scale-100 group-hover:drop-shadow-[0_20px_50px_rgba(255,255,255,0.1)]">
+                        </div>
+                    </div>
+                    <div class="md:col-span-5 space-y-6">
+                        <span class="text-yellow-400 font-bold text-sm tracking-tighter uppercase">03 // The Group Transporter</span>
+                        <h3 class="text-4xl font-bold italic font-doc-title text-white">SUV</h3>
+                        <p class="text-gray-400 leading-relaxed font-light">Versatile and spacious. The ideal choice for small groups or families requiring extra luggage capacity without compromising comfort.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="destinations" class="py-32 px-6 bg-black">
+    <div class="max-w-6xl mx-auto">
+        
+        <div class="mb-16">
+            <span class="text-yellow-400 font-bold uppercase tracking-[0.3em] text-xs">Route Archive</span>
+            <h2 class="text-4xl font-doc-title text-white mt-2 italic">Regional Transfers</h2>
+            <p class="text-gray-500 mt-4 max-w-xl font-light">Cross-province expeditions with fixed-rate transparency.</p>
+        </div>
+
+        <div class="overflow-hidden border border-white/10 rounded-2xl bg-white/5 backdrop-blur-md">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="border-b border-white/10 bg-white/10">
+                        <th class="p-6 text-[10px] uppercase tracking-widest text-gray-400 font-bold">Index / Journey</th>
+                        <th class="p-6 text-[10px] uppercase tracking-widest text-yellow-400 font-bold text-center">SUV</th>
+                        <th class="p-6 text-[10px] uppercase tracking-widest text-yellow-400 font-bold text-center">Starex</th>
+                        <th class="p-6 text-[10px] uppercase tracking-widest text-yellow-400 font-bold text-center">Alphard</th>
+                        <th class="p-6 text-[10px] uppercase tracking-widest text-yellow-400 font-bold text-center">Alphard2012</th>
+                        <th class="p-6 text-[10px] uppercase tracking-widest text-yellow-400 font-bold text-right">VIP/Alphard2020</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-white/5 font-light">
+                    <tr class="hover:bg-white/5 transition-colors group">
+                        <td class="p-6 font-medium text-white"><span class="text-gray-600 mr-4 group-hover:text-yellow-400">01</span>Phnom Penh — Sihanoukville</td>
+                        <td class="p-6 text-center text-gray-400">$79</td>
+                        <td class="p-6 text-center text-gray-400">$109</td>
+                        <td class="p-6 text-center text-gray-400">$99</td>
+                        <td class="p-6 text-center text-gray-400">$109</td>
+                        <td class="p-6 text-right text-white font-bold">$219</td>
+                    </tr>
+                    <tr class="hover:bg-white/5 transition-colors group">
+                        <td class="p-6 font-medium text-white"><span class="text-gray-600 mr-4 group-hover:text-yellow-400">02</span>Phnom Penh — Siem Reap</td>
+                        <td class="p-6 text-center text-gray-400">$79</td>
+                        <td class="p-6 text-center text-gray-400">$109</td>
+                        <td class="p-6 text-center text-gray-400">$109</td>
+                        <td class="p-6 text-center text-gray-400">$139</td>
+                        <td class="p-6 text-right text-white font-bold">$349</td>
+                    </tr>
+                    <tr class="hover:bg-white/5 transition-colors group">
+                        <td class="p-6 font-medium text-white"><span class="text-gray-600 mr-4 group-hover:text-yellow-400">03</span>Phnom Penh — Battambang</td>
+                        <td class="p-6 text-center text-gray-400">$89</td>
+                        <td class="p-6 text-center text-gray-400">$119</td>
+                        <td class="p-6 text-center text-gray-400">$119</td>
+                        <td class="p-6 text-center text-gray-400">$149</td>
+                        <td class="p-6 text-right text-white font-bold">$349</td>
+                    </tr>
+                    <tr class="hover:bg-white/5 transition-colors group">
+                        <td class="p-6 font-medium text-white"><span class="text-gray-600 mr-4 group-hover:text-yellow-400">04</span>Phnom Penh — Kompot / Kep</td>
+                        <td class="p-6 text-center text-gray-400">$59</td>
+                        <td class="p-6 text-center text-gray-400">$89</td>
+                        <td class="p-6 text-center text-gray-400">$89</td>
+                        <td class="p-6 text-center text-gray-400">$109</td>
+                        <td class="p-6 text-right text-white font-bold">$189</td>
+                    </tr>
+                    <tr class="hover:bg-white/5 transition-colors group">
+                        <td class="p-6 font-medium text-white"><span class="text-gray-600 mr-4 group-hover:text-yellow-400">05</span>Phnom Penh — Poipet</td>
+                        <td class="p-6 text-center text-gray-400">$109</td>
+                        <td class="p-6 text-center text-gray-400">$149</td>
+                        <td class="p-6 text-center text-gray-400">$149</td>
+                        <td class="p-6 text-center text-gray-400">$199</td>
+                        <td class="p-6 text-right text-white font-bold">$419</td>
+                    </tr>
+                    <tr class="hover:bg-white/5 transition-colors group">
+                        <td class="p-6 font-medium text-white"><span class="text-gray-600 mr-4 group-hover:text-yellow-400">06</span>Phnom Penh — Bavet</td>
+                        <td class="p-6 text-center text-gray-400">$59</td>
+                        <td class="p-6 text-center text-gray-400">$89</td>
+                        <td class="p-6 text-center text-gray-400">$89</td>
+                        <td class="p-6 text-center text-gray-400">$109</td>
+                        <td class="p-6 text-right text-white font-bold">$179</td>
+                    </tr>
+                    <tr class="hover:bg-white/5 transition-colors group">
+                        <td class="p-6 font-medium text-white"><span class="text-gray-600 mr-4 group-hover:text-yellow-400">07</span>Phnom Penh — ChreyThom</td>
+                        <td class="p-6 text-center text-gray-400">$49</td>
+                        <td class="p-6 text-center text-gray-400">$79</td>
+                        <td class="p-6 text-center text-gray-400">$79</td>
+                        <td class="p-6 text-center text-gray-400">$89</td>
+                        <td class="p-6 text-right text-white font-bold">$179</td>
+                    </tr>
+
+                    <tr class="hover:bg-white/5 transition-colors group">
+                        <td class="p-6 font-medium text-white"><span class="text-gray-600 mr-4 group-hover:text-yellow-400">08</span>Poipet — Siem Reap Airport</td>
+                        <td class="p-6 text-center text-gray-400">$69</td>
+                        <td class="p-6 text-center text-gray-400">$89</td>
+                        <td class="p-6 text-center text-gray-400">$89</td>
+                        <td class="p-6 text-center text-gray-400">$199</td>
+                        <td class="p-6 text-right text-white font-bold">$249</td>
+                    </tr>
+
+                    <tr class="hover:bg-white/5 transition-colors group">
+                        <td class="p-6 font-medium text-white"><span class="text-gray-600 mr-4 group-hover:text-yellow-400">09</span>Sihanoukville — Poipet</td>
+                        <td class="p-6 text-center text-gray-400">$169</td>
+                        <td class="p-6 text-center text-gray-400">$249</td>
+                        <td class="p-6 text-center text-gray-400">$249</td>
+                        <td class="p-6 text-center text-gray-400">$279</td>
+                        <td class="p-6 text-right text-white font-bold">$599</td>
+                    </tr>
+
+                     <tr class="hover:bg-white/5 transition-colors group">
+                        <td class="p-6 font-medium text-white"><span class="text-gray-600 mr-4 group-hover:text-yellow-400">10</span>Sihanoukville — Bavet</td>
+                        <td class="p-6 text-center text-gray-400">$129</td>
+                        <td class="p-6 text-center text-gray-400">$189</td>
+                        <td class="p-6 text-center text-gray-400">$189</td>
+                        <td class="p-6 text-center text-gray-400">$209</td>
+                        <td class="p-6 text-right text-white font-bold">$309</td>
+                    </tr>
+
+                    
+                    <tr class="hover:bg-white/5 transition-colors group">
+                        <td class="p-6 font-medium text-white"><span class="text-gray-600 mr-4 group-hover:text-yellow-400">11</span>Siem Reap — Sihanoukville</td>
+                        <td class="p-6 text-center text-gray-400">$149</td>
+                        <td class="p-6 text-center text-gray-400">$209</td>
+                        <td class="p-6 text-center text-gray-400">$209</td>
+                        <td class="p-6 text-center text-gray-400">$229</td>
+                        <td class="p-6 text-right text-white font-bold">$549</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-[10px] uppercase tracking-[0.2em] text-gray-500 ">
+            <div class="flex items-center gap-3"><span class="w-1 h-1 bg-yellow-400 rounded-full"></span> All-inclusive pricing</div>
+            <div class="flex items-center gap-3"><span class="w-1 h-1 bg-yellow-400 rounded-full"></span> 24/7 Dispatch Available</div>
+            <div class="flex items-center gap-3"><span class="w-1 h-1 bg-yellow-400 rounded-full"></span> Door-to-door service</div>
+        </div>
+    </div>
+</section>
+
+
+    <footer id="contact" class="py-20 px-6 border-t border-white/10 text-center">
+        <div class="mb-10 text-yellow-400 text-3xl">LocalT.taxi</div>
+        <div class="flex flex-col md:flex-row justify-center gap-5  text-gray-500">
+            <span>info@localTtaxi.com</span>
+            <span>+855 12 324 345 | +855 70 668 685 </span>
+            <span>Phnom Penh / Siem Reap</span>
+        </div>
+        <div class="flex flex-wrap justify-center gap-6 mt-12">
+            <a href="https://www.facebook.com/share/17uaAhuHrb/?mibextid=wwXIfr" target="_blank" 
+            class="group flex items-center gap-3 px-6 py-3 border border-yellow/10 rounded-full hover:bg-[#1877F2] hover:border-[#1877F2] transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+                <span class="text-[10px] uppercase tracking-[0.2em] font-bold">Facebook</span>
+            </a>
+
+            <a href="https://t.me/HENG_ATH_PRIVATE_TAXI" target="_blank" 
+            class="group flex items-center gap-3 px-6 py-3 border border-yellow/10 rounded-full hover:bg-[#0088cc] hover:border-[#0088cc] transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+                    <path d="m22 2-7 20-4-9-9-4Z"></path>
+                    <path d="M22 2 11 13"></path>
+                </svg>
+                <span class="text-[10px] uppercase tracking-[0.2em] font-bold">Telegram</span>
+            </a>
+
+            <a href="https://wa.me/85589526951" 
+            target="_blank" 
+            class="group flex items-center gap-3 px-6 py-3 border border-yellow/10 rounded-full hover:bg-[#25D366] hover:border-[#25D366] transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-14.08 8.38 8.38 0 0 1 3.8.9m.5 1.4.5-1.5 1.5.5-1.5.5Z"></path>
+                    <path d="M17.1 12.1a2.1 2.1 0 0 1 0 2.6l-2 2a2.1 2.1 0 0 1-2.6 0l-4.1-4.1a2.1 2.1 0 0 1 0-2.6l2-2a2.1 2.1 0 0 1 2.6 0Z"></path>
+                </svg>
+                <span class="text-[10px] uppercase tracking-[0.2em] font-bold">WhatsApp</span>
+            </a>
+        </div>
+            
+        <p class="mt-10 text-gray-700">&copy; 2026 Archive Series</p>
+    </footer>
+
+</body>
+</html>
