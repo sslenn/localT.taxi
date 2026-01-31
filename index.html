@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-<head>
+<!-- <head> -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>The Fleet | LocalTaxi Documentary</title>
@@ -83,93 +83,137 @@
         </div>
     </section>
 
-    <section id="featured-cars" class="py-32 px-6 bg-black">
-        <div class="max-w-7xl mx-auto">
-            <div class="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-6">
-                <div>
-                    <span class="text-yellow-400 font-bold uppercase tracking-[0.3em] text-xs">The Archive</span>
-                    <h2 class="text-5xl font-doc-title text-white mt-2">The Fleet</h2>
+<section id="featured-cars" class="py-32 px-6 bg-black overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+        <div class="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div>
+                <span class="text-yellow-400 font-bold uppercase tracking-[0.3em] text-xs">The Archive</span>
+                <h2 class="text-5xl font-doc-title text-white mt-2">The Fleet</h2>
+            </div>
+            <p class="text-gray-500 max-w-sm border-l border-yellow-400 pl-6">
+                A curated selection of vehicles designed for the diverse terrains of the Kingdom.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-7 overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-black border border-white/5 relative h-[400px] md:h-[500px]">
+                <div id="carousel-track" class="flex transition-transform duration-1000 cubic-bezier(0.4, 0, 0.2, 1) h-full">
+                    <div class="min-w-full h-full flex items-center justify-center p-8 slide-item">
+                        <img src="carModel/alphard2020.png" class="car-img max-w-full max-h-full object-contain">
+                    </div>
+                    <div class="min-w-full h-full flex items-center justify-center p-8 slide-item">
+                        <img src="carModel/alphard2012.png" class="car-img max-w-full max-h-full object-contain">
+                    </div>
+                    <div class="min-w-full h-full flex items-center justify-center p-8 slide-item">
+                        <img src="carModel/alphard.png" class="car-img max-w-full max-h-full object-contain">
+                    </div>
+                    <div class="min-w-full h-full flex items-center justify-center p-8 slide-item">
+                        <img src="carModel/starex.png" class="car-img max-w-full max-h-full object-contain">
+                    </div>
                 </div>
-                <p class="text-gray-500 max-w-sm border-l border-yellow-400 pl-6">
-                    A curated selection of vehicles designed for the diverse terrains of the Kingdom.
-                </p>
             </div>
 
-            <div class="space-y-32 md:space-y-48">
-                
-                <div class="group grid md:grid-cols-12 gap-12 items-center">
-                    <div class="md:col-span-7 overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-black border border-white/5">
-                        <div class="relative h-[400px] md:h-[500px] flex items-center justify-center p-8">
-                            <img src="carModel/alphard2020.png" alt="Alphard" 
-                                class="max-w-full max-h-full object-contain transition-all duration-1000 scale-110 group-hover:scale-100 group-hover:drop-shadow-[0_20px_50px_rgba(250,204,21,0.2)]">
-                        </div>
-                    </div>
-                    <div class="md:col-span-5 space-y-6">
-                        <span class="text-yellow-400 font-bold text-sm tracking-tighter uppercase">01 // The Executive</span>
-                        <h3 class="text-4xl font-bold italic font-doc-title text-white">Luxury Alphard</h3>
-                        <p class="text-gray-400 leading-relaxed font-light">Our flagship for high-end travel. Optimized for ultimate comfort and privacy, offering a seamless blend of luxury and executive class.</p>
-            
-                    </div>
+            <div class="md:col-span-5 space-y-6">
+                <div id="text-content" class="transition-all duration-500">
+                    <span id="car-number" class="text-yellow-400 font-bold text-sm tracking-tighter uppercase">01 // The Executive</span>
+                    <h3 id="car-title" class="text-4xl font-bold italic font-doc-title text-white mt-2">Luxury Alphard</h3>
+                    <p id="car-desc" class="text-gray-400 leading-relaxed font-light mt-4 h-24">Our flagship for high-end travel. Optimized for ultimate comfort and privacy.</p>
                 </div>
 
-                <div class="group grid md:grid-cols-12 gap-12 items-center">
-                    <div class="md:col-span-5 order-2 md:order-1 space-y-6 text-right">
-                        <span class="text-yellow-400 font-bold text-sm tracking-tighter uppercase">02 // The Navigator</span>
-                        <h3 class="text-4xl font-bold italic font-doc-title text-white">Premium Alphard</h3>
-                        <p class="text-gray-400 leading-relaxed font-light">Command the road. Built for family expeditions and long-distance comfort between provinces. Space meets durability.</p>
-                    </div>
-                    <div class="md:col-span-7 order-1 md:order-2 overflow-hidden rounded-2xl bg-gradient-to-bl from-gray-900 to-black border border-white/5">
-                        <div class="relative h-[400px] md:h-[500px] flex items-center justify-center p-8">
-                            <img src="carModel/alphard2012.png" alt="SUV" 
-                                class="max-w-full max-h-full object-contain transition-all duration-1000 scale-110 group-hover:scale-100 group-hover:drop-shadow-[0_20px_50px_rgba(255,255,255,0.1)]">
-                        </div>
-                    </div>
+                <div class="w-full h-px bg-white/10 relative mt-8">
+                    <div id="progress-bar" class="absolute top-0 left-0 h-full bg-yellow-400 transition-none w-0"></div>
                 </div>
 
-                <div class="group grid md:grid-cols-12 gap-12 items-center">
-                    <div class="md:col-span-7 overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-black border border-white/5">
-                        <div class="relative h-[400px] md:h-[500px] flex items-center justify-center p-8">
-                            <img src="carModel/alphard.png" alt="Starex" 
-                                class="max-w-full max-h-full object-contain transition-all duration-1000 scale-110 group-hover:scale-100 group-hover:drop-shadow-[0_20px_50px_rgba(255,255,255,0.1)]">
-                        </div>
+                <div class="flex items-center gap-6 pt-4">
+                    <div class="flex gap-2">
+                        <button onclick="manualMove(-1)" class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all">←</button>
+                        <button onclick="manualMove(1)" class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all">→</button>
                     </div>
-                    <div class="md:col-span-5 space-y-6">
-                        <span class="text-yellow-400 font-bold text-sm tracking-tighter uppercase">03 // The Group Transporter</span>
-                        <h3 class="text-4xl font-bold italic font-doc-title text-white">Alphard</h3>
-                        <p class="text-gray-400 leading-relaxed font-light">Versatile and spacious. The ideal choice for small groups or families requiring extra luggage capacity without compromising comfort.</p>
-                    </div>
+                    <span class="text-white/30 font-mono text-sm">
+                        <span id="current-num" class="text-yellow-400">01</span> / 04
+                    </span>
                 </div>
-
-                <div class="group grid md:grid-cols-12 gap-12 items-center">
-                    <div class="md:col-span-5 order-2 md:order-1 space-y-6 text-right">
-                        <span class="text-yellow-400 font-bold text-sm tracking-tighter uppercase">02 // The Navigator</span>
-                        <h3 class="text-4xl font-bold italic font-doc-title text-white">Hyundai Starex</h3>
-                        <p class="text-gray-400 leading-relaxed font-light">Command the road. Built for family expeditions and long-distance comfort between provinces. Space meets durability.</p>
-                    </div>
-                    <div class="md:col-span-7 order-1 md:order-2 overflow-hidden rounded-2xl bg-gradient-to-bl from-gray-900 to-black border border-white/5">
-                        <div class="relative h-[400px] md:h-[500px] flex items-center justify-center p-8">
-                            <img src="carModel/starex.png" alt="SUV" 
-                                class="max-w-full max-h-full object-contain transition-all duration-1000 scale-110 group-hover:scale-100 group-hover:drop-shadow-[0_20px_50px_rgba(255,255,255,0.1)]">
-                        </div>
-                    </div>
-                </div>
-
-                 <div class="group grid md:grid-cols-12 gap-12 items-center">
-                    <div class="md:col-span-7 overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-black border border-white/5">
-                        <div class="relative h-[400px] md:h-[500px] flex items-center justify-center p-8">
-                            <img src="carModel/suv.png" alt="Starex" 
-                                class="max-w-full max-h-full object-contain transition-all duration-1000 scale-110 group-hover:scale-100 group-hover:drop-shadow-[0_20px_50px_rgba(255,255,255,0.1)]">
-                        </div>
-                    </div>
-                    <div class="md:col-span-5 space-y-6">
-                        <span class="text-yellow-400 font-bold text-sm tracking-tighter uppercase">03 // The Group Transporter</span>
-                        <h3 class="text-4xl font-bold italic font-doc-title text-white">SUV</h3>
-                        <p class="text-gray-400 leading-relaxed font-light">Versatile and spacious. The ideal choice for small groups or families requiring extra luggage capacity without compromising comfort.</p>
-                </div>
-
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<style>
+    /* Slow zoom effect for the active car */
+    .car-img {
+        transition: transform 8s ease-out;
+        transform: scale(1);
+    }
+    .active-slide .car-img {
+        transform: scale(1.15);
+        filter: drop-shadow(0 20px 50px rgba(250, 204, 21, 0.15));
+    }
+</style>
+
+<script>
+    const carData = [
+        { n: "01 // The Executive", t: "Luxury Alphard", d: "Our flagship for high-end travel. Optimized for ultimate comfort and privacy." },
+        { n: "02 // The Navigator", t: "Premium Alphard", d: "Command the road. Built for family expeditions and long-distance comfort." },
+        { n: "03 // The Voyager", t: "Alphard Classic", d: "Versatile and spacious. The ideal choice for small groups or families." },
+        { n: "04 // The Navigator", t: "Hyundai Starex", d: "Built for family expeditions and long-distance comfort between provinces." }
+    ];
+
+    let currentIndex = 0;
+    let progressInterval;
+    const duration = 5000; // 5 seconds per slide
+
+    function startProgressBar() {
+        const bar = document.getElementById('progress-bar');
+        bar.style.transition = 'none';
+        bar.style.width = '0%';
+        
+        // Use a slight timeout to trigger the transition
+        setTimeout(() => {
+            bar.style.transition = `width ${duration}ms linear`;
+            bar.style.width = '100%';
+        }, 50);
+    }
+
+    function updateCarousel(index) {
+        currentIndex = (index + carData.length) % carData.length;
+        const track = document.getElementById('carousel-track');
+        const slides = document.querySelectorAll('.slide-item');
+        
+        // 1. Move Track
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        
+        // 2. Handle Image Zoom Animation
+        slides.forEach((s, i) => {
+            i === currentIndex ? s.classList.add('active-slide') : s.classList.remove('active-slide');
+        });
+
+        // 3. Update Text Content
+        const content = document.getElementById('text-content');
+        content.style.opacity = 0;
+        content.style.transform = 'translateY(10px)';
+        
+        setTimeout(() => {
+            document.getElementById('car-number').innerText = carData[currentIndex].n;
+            document.getElementById('car-title').innerText = carData[currentIndex].t;
+            document.getElementById('car-desc').innerText = carData[currentIndex].d;
+            document.getElementById('current-num').innerText = `0${currentIndex + 1}`;
+            content.style.opacity = 1;
+            content.style.transform = 'translateY(0)';
+        }, 300);
+
+        // 4. Reset Timer
+        clearInterval(progressInterval);
+        startProgressBar();
+        progressInterval = setInterval(() => updateCarousel(currentIndex + 1), duration);
+    }
+
+    function manualMove(dir) {
+        updateCarousel(currentIndex + dir);
+    }
+
+    // Initialize
+    window.onload = () => updateCarousel(0);
+</script>
 
    <section id="destinations" class="py-32 px-6 bg-black">
     <div class="max-w-6xl mx-auto">
