@@ -98,7 +98,7 @@
         <div class="grid md:grid-cols-12 gap-12 items-center">
             <div class="md:col-span-7 overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-black border border-white/5 relative h-[400px] md:h-[500px]">
                 <div id="carousel-track" class="flex transition-transform duration-1000 cubic-bezier(0.4, 0, 0.2, 1) h-full">
-                    <div class="min-w-full h-full flex items-center justify-center p-8 slide-item">
+                    <div class="min-w-full h-full flex items-center justify-center p-8 slide-item active-slide">
                         <img src="carModel/alphard2020.png" class="car-img max-w-full max-h-full object-contain">
                     </div>
                     <div class="min-w-full h-full flex items-center justify-center p-8 slide-item">
@@ -110,6 +110,9 @@
                     <div class="min-w-full h-full flex items-center justify-center p-8 slide-item">
                         <img src="carModel/starex.png" class="car-img max-w-full max-h-full object-contain">
                     </div>
+                    <div class="min-w-full h-full flex items-center justify-center p-8 slide-item">
+                        <img src="carModel/suv.png" class="car-img max-w-full max-h-full object-contain">
+                    </div>
                 </div>
             </div>
 
@@ -117,7 +120,28 @@
                 <div id="text-content" class="transition-all duration-500">
                     <span id="car-number" class="text-yellow-400 font-bold text-sm tracking-tighter uppercase">01 // The Executive</span>
                     <h3 id="car-title" class="text-4xl font-bold italic font-doc-title text-white mt-2">Luxury Alphard</h3>
-                    <p id="car-desc" class="text-gray-400 leading-relaxed font-light mt-4 h-24">Our flagship for high-end travel. Optimized for ultimate comfort and privacy.</p>
+                    
+                    <div class="mt-4 mb-6 inline-block bg-yellow-400/10 border border-yellow-400/30 px-4 py-1 rounded-sm">
+                        <span class="text-xs text-yellow-400 uppercase tracking-widest mr-2">Est. Range:</span>
+                        <span id="car-price" class="text-white font-bold">$120 - $150</span>
+                    </div>
+
+                    <p id="car-desc" class="text-gray-400 leading-relaxed font-light h-24">Our flagship for high-end travel. Optimized for ultimate comfort and privacy.</p>
+                    
+                    <div class="grid grid-cols-3 gap-4 pt-6 border-t border-white/5">
+                        <div>
+                            <p class="text-[10px] text-gray-500 uppercase tracking-widest">Capacity</p>
+                            <p id="spec-seats" class="text-white font-medium">7 Seats</p>
+                        </div>
+                        <div>
+                            <p class="text-[10px] text-gray-500 uppercase tracking-widest">Type</p>
+                            <p id="spec-type" class="text-white font-medium">Premium</p>
+                        </div>
+                        <div>
+                            <p class="text-[10px] text-gray-500 uppercase tracking-widest">Luggage</p>
+                            <p id="spec-luggage" class="text-white font-medium">4 Bags</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="w-full h-px bg-white/10 relative mt-8">
@@ -126,11 +150,11 @@
 
                 <div class="flex items-center gap-6 pt-4">
                     <div class="flex gap-2">
-                        <button onclick="manualMove(-1)" class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all">←</button>
-                        <button onclick="manualMove(1)" class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all">→</button>
+                        <button onclick="manualMove(-1)" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-yellow-400 hover:text-black transition-all">←</button>
+                        <button onclick="manualMove(1)" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-yellow-400 hover:text-black transition-all">→</button>
                     </div>
                     <span class="text-white/30 font-mono text-sm">
-                        <span id="current-num" class="text-yellow-400">01</span> / 04
+                        <span id="current-num" class="text-yellow-400">01</span> / 05
                     </span>
                 </div>
             </div>
@@ -139,35 +163,28 @@
 </section>
 
 <style>
-    /* Slow zoom effect for the active car */
-    .car-img {
-        transition: transform 8s ease-out;
-        transform: scale(1);
-    }
-    .active-slide .car-img {
-        transform: scale(1.15);
-        filter: drop-shadow(0 20px 50px rgba(250, 204, 21, 0.15));
-    }
+    .car-img { transition: transform 8s ease-out; transform: scale(1); }
+    .active-slide .car-img { transform: scale(1.12); filter: drop-shadow(0 20px 50px rgba(250,204,21,0.15)); }
+    #text-content { will-change: transform, opacity; }
 </style>
 
 <script>
     const carData = [
-        { n: "01 // The Executive", t: "Luxury Alphard", d: "Our flagship for high-end travel. Optimized for ultimate comfort and privacy." },
-        { n: "02 // The Navigator", t: "Premium Alphard", d: "Command the road. Built for family expeditions and long-distance comfort." },
-        { n: "03 // The Voyager", t: "Alphard Classic", d: "Versatile and spacious. The ideal choice for small groups or families." },
-        { n: "04 // The Navigator", t: "Hyundai Starex", d: "Built for family expeditions and long-distance comfort between provinces." }
+        { n: "01 // The Executive", t: "Luxury Alphard", d: "Our flagship for high-end travel. Optimized for ultimate comfort and privacy.", p: "$120 - $150", seats: "7 Seats", type: "Executive", luggage: "4 Bags" },
+        { n: "02 // The Navigator", t: "Premium Alphard", d: "Command the road. Built for family expeditions and long-distance comfort.", p: "$100 - $130", seats: "7 Seats", type: "Premium", luggage: "4 Bags" },
+        { n: "03 // The Voyager", t: "Alphard Classic", d: "Versatile and spacious. The ideal choice for small groups or families.", p: "$80 - $110", seats: "8 Seats", type: "Standard", luggage: "5 Bags" },
+        { n: "04 // The Navigator", t: "Hyundai Starex", d: "Built for family expeditions and long-distance comfort between provinces.", p: "$90 - $120", seats: "9 Seats", type: "Navigator", luggage: "6 Bags" },
+        { n: "05 // The Group Transporter", t: "Premium SUV", d: "The ideal choice for small groups requiring extra luggage capacity.", p: "$70 - $100", seats: "5 Seats", type: "SUV", luggage: "3 Bags" }
     ];
 
     let currentIndex = 0;
     let progressInterval;
-    const duration = 5000; // 5 seconds per slide
+    const duration = 6000; // 6 seconds for slightly slower reading
 
     function startProgressBar() {
         const bar = document.getElementById('progress-bar');
         bar.style.transition = 'none';
         bar.style.width = '0%';
-        
-        // Use a slight timeout to trigger the transition
         setTimeout(() => {
             bar.style.transition = `width ${duration}ms linear`;
             bar.style.width = '100%';
@@ -179,29 +196,31 @@
         const track = document.getElementById('carousel-track');
         const slides = document.querySelectorAll('.slide-item');
         
-        // 1. Move Track
         track.style.transform = `translateX(-${currentIndex * 100}%)`;
         
-        // 2. Handle Image Zoom Animation
         slides.forEach((s, i) => {
             i === currentIndex ? s.classList.add('active-slide') : s.classList.remove('active-slide');
         });
 
-        // 3. Update Text Content
         const content = document.getElementById('text-content');
         content.style.opacity = 0;
-        content.style.transform = 'translateY(10px)';
+        content.style.transform = 'translateX(20px)';
         
         setTimeout(() => {
-            document.getElementById('car-number').innerText = carData[currentIndex].n;
-            document.getElementById('car-title').innerText = carData[currentIndex].t;
-            document.getElementById('car-desc').innerText = carData[currentIndex].d;
+            const data = carData[currentIndex];
+            document.getElementById('car-number').innerText = data.n;
+            document.getElementById('car-title').innerText = data.t;
+            document.getElementById('car-desc').innerText = data.d;
+            document.getElementById('car-price').innerText = data.p;
+            document.getElementById('spec-seats').innerText = data.seats;
+            document.getElementById('spec-type').innerText = data.type;
+            document.getElementById('spec-luggage').innerText = data.luggage;
             document.getElementById('current-num').innerText = `0${currentIndex + 1}`;
+            
             content.style.opacity = 1;
-            content.style.transform = 'translateY(0)';
+            content.style.transform = 'translateX(0)';
         }, 300);
 
-        // 4. Reset Timer
         clearInterval(progressInterval);
         startProgressBar();
         progressInterval = setInterval(() => updateCarousel(currentIndex + 1), duration);
@@ -211,7 +230,6 @@
         updateCarousel(currentIndex + dir);
     }
 
-    // Initialize
     window.onload = () => updateCarousel(0);
 </script>
 
